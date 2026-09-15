@@ -1,0 +1,280 @@
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 64px 24px 96px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 56px;
+}
+
+.mark {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  background: var(--forest);
+  flex-shrink: 0;
+}
+
+.wordmark {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  letter-spacing: 0.02em;
+}
+
+.wordmark span {
+  color: var(--wheat);
+}
+
+.hero {
+  margin-bottom: 40px;
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(32px, 5vw, 44px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin: 0 0 16px;
+  max-width: 16ch;
+}
+
+.subhead {
+  font-size: 17px;
+  color: var(--ink-soft);
+  max-width: 54ch;
+  margin: 0;
+}
+
+.r2Badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 16px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--forest);
+  background: #eef1e6;
+  border-radius: 20px;
+  padding: 5px 12px;
+}
+
+.form {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 560px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field.full {
+  grid-column: 1 / -1;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.hint {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-soft);
+}
+
+.select,
+.input {
+  border: 1px solid var(--line-strong);
+  border-radius: 7px;
+  padding: 10px 12px;
+  font-size: 14px;
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.select:focus,
+.input:focus {
+  border-color: var(--forest);
+}
+
+.submitRow {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 4px;
+}
+
+.submitBtn {
+  background: var(--forest);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 12px 22px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.errorBox {
+  margin-top: 16px;
+  padding: 12px 16px;
+  background: #fbeee7;
+  border: 1px solid #e3b7a1;
+  border-radius: 8px;
+  color: #9c4221;
+  font-size: 14px;
+}
+
+.resultCard {
+  margin-top: 28px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 28px;
+}
+
+.resultLabel {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin: 0 0 6px;
+}
+
+.resultValue {
+  font-family: var(--font-display);
+  font-size: 42px;
+  font-weight: 500;
+  margin: 0;
+  color: var(--forest);
+}
+
+.resultUnit {
+  font-size: 18px;
+  font-family: var(--font-body);
+  color: var(--ink-soft);
+  margin-left: 8px;
+}
+
+.rangeTrack {
+  position: relative;
+  height: 8px;
+  background: var(--line);
+  border-radius: 4px;
+  margin: 22px 0 8px;
+}
+
+.rangeFill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: var(--wheat);
+  border-radius: 4px;
+}
+
+.rangeMarker {
+  position: absolute;
+  top: -4px;
+  width: 3px;
+  height: 16px;
+  background: var(--forest);
+  border-radius: 2px;
+}
+
+.rangeLabels {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-soft);
+}
+
+.section {
+  margin-top: 72px;
+  border-top: 1px solid var(--line);
+  padding-top: 40px;
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+  margin: 0 0 20px;
+}
+
+.stepGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 620px) {
+  .stepGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.step {
+  border-top: 2px solid var(--forest);
+  padding-top: 12px;
+}
+
+.stepNum {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-soft);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.stepTitle {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.stepText {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.footer {
+  margin-top: 72px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--ink-soft);
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer a {
+  color: var(--ink-soft);
+}

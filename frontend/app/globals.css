@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap");
+
+:root {
+  --bg: #f6f5ef;
+  --surface: #ffffff;
+  --ink: #16231a;
+  --ink-soft: #4c5a43;
+  --forest: #1f3d2b;
+  --wheat: #c68a2e;
+  --sky: #2f5d82;
+  --line: #dce0d2;
+  --line-strong: #b7bfa9;
+
+  --font-display: "Spectral", Georgia, serif;
+  --font-body: "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--wheat);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--forest);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
